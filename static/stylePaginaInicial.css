@@ -248,6 +248,11 @@
         padding: 12px;
         font-size: 0.9em;
     }
+    img{
+
+        width: 50%;
+        height: auto;
+    }
 }
 
 /* Para telas muito pequenas (smartphones em modo retrato) */
@@ -255,6 +260,10 @@
     body {
         padding: 0.5em;
         font-size: 14px;
+    }
+    img{
+        width: 50%;
+        height: auto;
     }
 
     .sidebar {
