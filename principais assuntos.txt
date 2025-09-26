@@ -1,0 +1,16 @@
+1. Matemática:
+Álgebra Linear: Sistemas de equações lineares (método de eliminação de Gauss), matrizes, geometria analítica e álgebra vetorial.
+Cálculo Diferencial e Integral: Limites de funções e sequências.
+Probabilidade e Estatística: Conceitos básicos de probabilidade e estatística.
+Matemática Discreta: Conjuntos, relações, funções, lógica matemática e análise combinatória. 
+2. Lógica:
+Lógica Matemática: Proposições, operadores lógicos, tabelas-verdade, argumentos válidos e falácias. 
+3. Computação:
+Estruturas de Dados e Algoritmos:
+Listas, árvores, grafos, filas, pilhas, algoritmos de busca e ordenação.
+Arquitetura de Computadores:
+Componentes de um sistema computacional, organização e funcionamento de processadores, memória e periféricos.
+Sistemas Operacionais:
+Conceitos básicos de sistemas operacionais, processos, threads, concorrência e escalonamento.
+Redes de Computadores:
+Conceitos básicos de redes, protocolos, modelos de referência e segurança. 

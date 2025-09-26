@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSCOMP UNILAB</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylePaginaInicial.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='icon.png')}}">
+</head>
+<body>
+
+    <!--SIDEBAR-->
+     <div class="page-wrapper">
+        <aside class="sidebar">
+            <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
+            <h3>Ano da Prova</h3>
+            <ul>
+                <li><a href="{{url_for('POSCOMP2024')}}">2024</a></li>
+                <li><a href="{{url_for('POSCOMP2023')}}">2023</a></li>
+                <li><a href="{{url_for('POSCOMP2022')}}">2022</a></li>
+                <li><a href="#">2021</a></li>
+                <li><a href="#">2020</a></li>
+                <li><a href="{{url_for('sobre')}}">Sobre</a></li>
+            </ul>
+        </aside>
+
+
+    <div class="main-container">
+
+        <div class="content-container">
+            <h1>POSCOMP UNILAB</h1>
+
+            <h2>Bem-vindo à interface POSCOMP UNILAB</h2>
+            <p>
+                O objetivo da interface é facilitar o acesso às questões do POSCOMP para os estudantes da UNILAB. A plataforma oferece uma ferramenta simples e interativa, permitindo que os alunos pratiquem questões de provas anteriores, verifiquem suas respostas e se preparem melhor para a pós-graduação em Computação.
+            </p>
+
+            <h2>Sobre o POSCOMP</h2>
+            <p>
+                O POSCOMP é um exame nacional que avalia os conhecimentos na área de Computação. Ele é usado por muitos programas de pós-graduação no Brasil como parte do processo seletivo. Mais informações sobre o exame acesse o site da <a href="https://www.sbc.org.br" target="_blank">SBC</a>.
+            </p>
+            <p>
+                Selecione o ano da prova no menu lateral para começar.
+            </p>
+        </div>
+
+        <div class="image-area">
+            <img src="{{ url_for('static', filename='pi.png') }}" alt="Imagem de um estudante" class="image-placeholder">
+        </div>
+    </div>
+    </div>
+<footer>
+    <p class="footer">Desenvolvido por Ivina Lorena Oliveira Moura- Eng. Computação</p>
+</footer>
+
+</body>
+</html>

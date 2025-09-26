@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSCOMP 2023</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylePOSCOMP2023.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='icon.png')}}">
+</head>
+<body>
+<!--sidebar-->
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
+            <h3>Ano da Prova</h3>
+            <ul>
+                <li><a href="{{url_for('POSCOMP2024')}}">2024</a></li>
+                <li><a href="{{url_for('POSCOMP2023')}}">2023</a></li>
+                <li><a href="{{url_for('POSCOMP2022')}}">2022</a></li>
+                <li><a href="#">2021</a></li>
+                <li><a href="#">2020</a></li>
+                <li><a href="{{url_for('sobre')}}">Sobre</a></li>
+            </ul>
+        </aside>
+<div class="main-container">
+    <h1 class="container-titulo">
+        MATEMÁTICA
+    </h1>    
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 01 – Resolva o sistema abaixo utilizando o método de Gauss.
+        </p>
+        
+        <div style="text-align: center; margin: 1em 0;">
+            \[2x - 2y + z = -3\]<br>
+            \[x + 3y - 2z = 1\]<br>
+            \[3x - y - z = 2\]
+        </div>
+
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> (1/5, -1, 2/5) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> (0, -1, 0) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> (2/5, 0, 2/5) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> (-7/5, -2, -21/5) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> (-1/5, -1, -1/5) </li>
+        </ul>
+        <div class="feedback-area">
+        </div>
+    </div>
+    <div class="questao-container" style="border: 2px dashed #ff0000;">
+        <p class="questao-titulo" style="color: #ff0000;">
+
+            QUESTÃO 02 – Calcule o valor de \(\alpha\) que provoca que o determinante da matriz \(Z\) seja 8: (QUESTÃO ANULADA)
+        </p>
+        
+        <div style="text-align: center; margin: 1em 0;">
+            \[Z = \begin{pmatrix}
+            1 & -1 & -1 \\
+            -1 & 1 & -1 \\
+            2 & 2 & \alpha
+            \end{pmatrix}\]
+        </div>
+
+        <ul class="opcoes" data-correct-answer="all">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \(\alpha = 1\) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \(\alpha = 2\) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \(\alpha = 4\) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \(\alpha = 7\) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \(\alpha = 11\) </li>
+        </ul>
+        <div class="feedback-area" style="color: #ff0000;">
+            Esta questão foi anulada - todas as alternativas são consideradas corretas.
+        </div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 03 – Assinale a alternativa que apresenta o polinômio característico da matriz.
+        </p>
+        
+        <div style="text-align: center; margin: 1em 0;">
+            \[A = \begin{pmatrix}
+            1 & -1 & -1 \\
+            -1 & 1 & -1 \\
+            2 & 2 & 4
+            \end{pmatrix}\]
+        </div>
+
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \((\lambda - 2)\) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \((\lambda - 2)^2\) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \((\lambda + 2)\) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \((\lambda - 4)\) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \(-(\lambda - 2)^3\) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 04 – Quantas formas existem de permutar os elementos do conjunto {1,2,3,4} de maneira que o número 1 não esteja na primeira posição e o número 2 não esteja na segunda posição?
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 6 </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 8 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 10 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 12 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 14 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 05 – Em um grafo simples não direcionado com n vértices, a quantidade máxima de arestas é dada por n.(n−1)/2. Qual é o número máximo de arestas que um grafo não direcionado G com 7 vértices pode ter sem formar um ciclo?
+        </p>
+        <ul class="opcoes" data-correct-answer="A">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 6 </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 7 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 10 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 11 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 21 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 06 – Uma startup de jogos eletrônicos tem 7 jogos de ação e 5 jogos de esportes. As vendas dos jogos são realizadas com um pacote de 4 jogos. Quantas são as opções de venda da startup em que haja pelo menos 2 jogos de esportes?
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 70 </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 120 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 210 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 285 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 495 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 07 – Calcule o limite em infinito da função \( f(x) = \sqrt{x^2 + 1} - x \).
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> -∞ </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> -1 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 0 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 1 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> ∞ </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 08 – Assinale a alternativa que apresenta o intervalo em que a função \( g(x) = \frac{\sqrt{4 - x^2}}{3x - 1} \) é contínua.
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> [-4, 1) ∪ (1, 4] </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> [-2, 3) ∪ (3, 2] </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> [-2, 1/3) ∪ (1/3, 2] </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> [-\infty, 2) ∪ (2, \infty) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> [-\infty, 0) ∪ (0, \infty) </li>
+        </ul>
+        <div class="feedback-area"></div>
+
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 09 – Calcule a integral definida \[ \int_{1}^{e} \frac{\ln x}{x}  dx. \]
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> e </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 2 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 1 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 1/2 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 0 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 10 – O ponto médio do segmento de extremos A(5, -1) e B(4, -2) é:
+        </p>
+        <ul class="opcoes" data-correct-answer="B">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( \left( \frac{1}{2}, \frac{1}{2} \right) \) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( \left( \frac{9}{2}, \frac{-3}{2} \right) \) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( \left( \frac{3}{2}, \frac{3}{2} \right) \) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( \left( 1, \frac{1}{2} \right) \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( \left( \frac{1}{2}, 2 \right) \) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 11 – Calcule os dois valores de k em que a distância do ponto P(2, k) até a reta r: x - y + 3 = 0 é \(\sqrt{2}\).
+        </p>
+        <ul class="opcoes" data-correct-answer="A">
+            <li data-option="A"> <span class="opcao-letra">A)</span> k = 3 e k = 7 </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> k = -1 e k = 2 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> k = 3 e k = 5 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> k = 2 e k = 3 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> k = 5 e k = 7 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 12 – Determine o ponto de intersecção das retas abaixo:
+        </p>
+        
+        <div style="text-align: center; margin: 1em 0;">
+            \[r: 
+            \begin{cases} 
+            x = 2 - 4t \\ 
+            y = -2 + t 
+            \end{cases}\]
+            <br>
+            \[s: 
+            \begin{cases} 
+            x = 3 + 8u \\ 
+            y = -1 - 2u 
+            \end{cases}\]
+        </div>
+
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> (-3, 1) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> (1, 2) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> (-5, 0) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> (1, 1) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> As retas são paralelas e não possuem ponto de intersecção </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 13 – A expressão lógica ~p→~q é equivalente a:
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> ~q∧~p </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> ~q→p </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> q→~p </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> q→p </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> p→q </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 14 – Dadas duas proposições lógicas q e p, a proposição lógica ~(p ou q) é verdadeira se, e somente se, for falsa a proposição:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> p e q </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> ~p </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> ~p→q </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> ~p→~q </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> ~q </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 15 – Considere as premissas verdadeiras a seguir:
+        </p>
+        
+        <div style="margin: 1em 0; padding-left: 1em;">
+            - Premissa 1: Se Ana Paula joga vôlei ou Joaquim joga videogame, então Victória vai à praia.<br>
+            - Premissa 2: Hoje, Victória não foi à praia.<br>
+            - Premissa 3: Se hoje é sábado, então Ana Paula joga vôlei e Caio treina boxe.
+        </div>
+
+        <p class="questao-titulo">
+            Considerando as premissas apresentadas, é correto afirmar que:
+        </p>
+        <ul class="opcoes" data-correct-answer="B">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Hoje é sábado e Ana Paula jogou vôlei </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Hoje não é sábado e Joaquim não jogou videogame </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Ana Paula jogou vôlei ou Joaquim jogou videogame </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Hoje é sábado e Joaquim jogou videogame </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Hoje não é sábado e Ana Paula jogou vôlei </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 16 – Utilizando as leis de Morgan, assinale a alternativa que apresenta uma expressão em forma de somas de produtos para a seguinte função:
+        </p>
+        
+        <div style="text-align: center; margin: 1em 0;">
+            \[F = \overline{(A + C) \cdot (B + D)}\]
+        </div>
+
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( AC + B \) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( AC + BD \) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( AC + B \) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( \overline{A} \cdot \overline{C} + \overline{B} \cdot \overline{D} \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( A + B \) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" style="border: 2px dashed #ff0000;">
+        <p class="questao-titulo" style="color: #ff0000;">
+            QUESTÃO 17 – Simplifique a expressão booleana \( f = \bar{a}b\bar{c} + \bar{a}bc + \bar{a}\bar{b}c + abc + a\bar{b}c \) empregando o mapa de Karnaugh. (QUESTÃO ANULADA)
+        </p>
+        
+        <div style="text-align: center; margin: 1em 0;">
+            \[ f = \bar{a}b\bar{c} + \bar{a}bc + \bar{a}\bar{b}c + abc + a\bar{b}c \]
+        </div>
+
+        <ul class="opcoes" data-correct-answer="all">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( f = a'b + ab \) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( f = ab + c \) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( f = a'b + c \) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( f = a'b + b \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( f = b + ab \) </li>
+        </ul>
+        <div class="feedback-area" style="color: #ff0000;">
+            Esta questão foi anulada - todas as alternativas são consideradas corretas.
+        </div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 18 – Determine a saída S do circuito lógico abaixo:
+        </p>
+        
+        <img class="questao27" src="{{url_for('static', filename = 'quest18POS2024.PNG')}}" />
+
+        <ul class="opcoes" data-correct-answer="A">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( \overline{(AB + B)\overline{B}} \) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( \overline{(AB + B)} \) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( \overline{(AB + B)B} \) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( \overline{(AB + \overline{B})} \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( \overline{(A + B)\overline{B}} \) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="info-container">
+        <p class="questao-titulo">Para responder às questões 19 e 20, utilize a seguinte lista de dados, correspondente ao número de segundos
+            que um software precisa para resolver um cálculo matemático:<br>
+            60, 66, 77, 70, 66, 68, 57, 70, 66, 52, 75, 65, 69, 71, 58, 66, 67, 74, 61,
+            63, 69, 80, 59, 66, 70, 67, 78, 75, 64, 71, 81, 62, 64, 69, 68, 72, 83, 56,
+            65, 74, 67, 54, 65, 65, 69, 61, 67, 73, 57, 62, 67, 68, 63, 67, 71, 68, 76,
+            61, 62, 63, 76, 61, 67, 67, 64, 72, 64, 73, 79, 58, 67, 71, 68, 59, 69, 70,
+            66, 62, 63, 66
+        </p>
+    
+    </div>
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 19 – A percentagem de tempo em que o processo de cálculo é inferior a 65 segundos é:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 28,8% </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 30,0% </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 32,5% </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 36,3% </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 40,0% </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+        <p class="questao-titulo">
+            QUESTÃO 20 – O tempo médio aproximado, que o software leva para realizar os cálculos é:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 65 </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 66 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 67 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 68 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 69 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+    
+<h1 class="container-titulo">
+    FUNDAMENTOS DA COMPUTAÇÃO
+    </h1>  
+
+
+</div><!--div da questão container-->
+
+</div><!--div da main container-->
+
+
+
+
+
+<footer>
+    <p class="footer">Desenvolvido por Ivina Lorena Oliveira Moura- Eng. Computação</p>
+</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Encontra TODAS as questões na página
+    const todasAsQuestoes = document.querySelectorAll('.questao-container');
+
+    // Aplica a lógica para CADA UMA delas independentemente
+    todasAsQuestoes.forEach(questao => {
+        const optionsList = questao.querySelector('.opcoes');
+        const options = questao.querySelectorAll('.opcoes li');
+        const feedbackEl = questao.querySelector('.feedback-area');
+        
+        // Pega a resposta correta direto do atributo do HTML
+        const CORRECT_ANSWER = optionsList.dataset.correctAnswer;
+        
+        let respostaEnviada = false; // Flag individual para esta questão
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                if (respostaEnviada) {
+                    return;
+                }
+                
+                respostaEnviada = true; 
+                optionsList.classList.add('respondido');
+
+                const chosenOption = option.dataset.option;
+
+                if (chosenOption === CORRECT_ANSWER) {
+                    option.classList.add('correct');
+                    feedbackEl.textContent = 'Parabéns! Resposta Correta!';
+                    feedbackEl.classList.add('feedback-correct');
+                    if(typeof confetti === 'function') {
+                        confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 } });
+                    }
+                } else {
+                    option.classList.add('incorrect');
+                    feedbackEl.textContent = 'Ops! A resposta correta era a ' + CORRECT_ANSWER + '.';
+                    feedbackEl.classList.add('feedback-incorrect');
+                }
+            });
+        });
+    });
+});
+</script>
+</html>

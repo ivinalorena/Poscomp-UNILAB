@@ -1,0 +1,314 @@
+
+body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2em;
+            padding-bottom: 0;
+            font-size: 18px;
+            background-color: #ffffff;
+        }
+
+         /* Container principal que organiza o menu lateral e o conteúdo */
+        .page-wrapper {
+            display: flex;
+            min-height:auto; /*100vh; /* Altura mínima de toda a janela */
+        }
+
+        /* --- Menu Lateral --- */
+        .sidebar {
+            width: 240px; /* Largura do menu lateral */
+            height: 20%;
+            flex-shrink: 0; /* Impede que o menu encolha */
+            background: #f8f9fa; /* Cor de fundo do menu lateral */;
+            border-right: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 25px;
+            box-sizing: border-box; /* Garante que o padding não aumente a largura */
+        }
+
+        .sidebar h3 {
+            font-size: 1.2em;
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #e2e6ea;
+        }
+
+
+/* --- ÁREA DE CONTEÚDO PRINCIPAL --- */
+.main-container {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 40px;
+    display: flex; /* ESSENCIAL: para colocar os cards lado a lado */
+    justify-content: center; /* Centraliza os cards no espaço disponível */
+    align-items: flex-start; /* Alinha os cards no topo */
+    gap: 40px; /* Espaço entre os dois cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas pequenas */
+}
+
+/* --- BLOCO DE TEXTO "SOBRE" (estilizado como um card) --- */
+.content-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(42, 41, 41, 0.08);
+    max-width: 500px; /* Largura máxima para o texto */
+    flex-shrink: 1;
+}
+
+.content-container h1 {
+    margin-top: 0;
+}
+
+/* --- CARD DA DESENVOLVEDORA --- */
+.developer-card-container {
+    flex-shrink: 0; /* Impede que o card encolha */
+}
+
+.developer-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(42, 41, 41, 0.08);
+    text-align: center;
+    width: 340px;
+    box-sizing: border-box;
+}
+
+.developer-card .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* A mágica para a imagem circular */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 1px solid #bbbbbb; /* Borda azul na imagem */
+}
+
+.developer-card h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+.developer-card .role {
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.developer-card .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.developer-card .social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.developer-card .social-links a:hover img {
+    transform: scale(1.15); /* Efeito de zoom ao passar o mouse */
+}
+
+.footer{
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center;
+        border-top: solid 1px  #3cffb4;
+        margin: 0;
+        font-size: smaller;
+        font-family: Arial, sans-serif;
+        font-style: initial;
+        color: #58595a;
+        }
+a {
+    color: #58595a;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: overline;
+}
+/* --- RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS --- */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1em;
+        font-size: 16px;
+    }
+
+    .page-wrapper {
+        flex-direction: column; /* Muda para layout vertical */
+    }
+
+    /* Menu lateral em mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .sidebar h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sidebar ul li {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .sidebar ul li a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    /* Container principal em mobile */
+    .main-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Container do título em mobile */
+    .container-titulo {
+        padding: 0.8em;
+        margin: 0.5em 0;
+        font-size: 18px;
+    }
+
+    /* Container das questões em mobile */
+    .questao-container {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .questao-titulo {
+        font-size: 1.1em;
+    }
+
+    /* Imagens das questões responsivas */
+    .questao27 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Caixa de afirmação em mobile */
+    .afirmacao-box {
+        padding: 12px;
+        margin: 1em 0;
+        font-size: 0.95em;
+    }
+
+    /* Opções das questões em mobile */
+    .opcoes li {
+        margin-bottom: 1em;
+        padding: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .opcao-letra {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* Área de feedback em mobile */
+    .feedback-area {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Para telas muito pequenas (smartphones em modo retrato) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0.5em;
+        font-size: 14px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        flex-direction: column;
+    }
+
+    .sidebar ul li {
+        width: 100%;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .container-titulo {
+        padding: 0.6em;
+        font-size: 16px;
+        margin: 0.3em 0;
+    }
+
+    .questao-container {
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .questao-titulo {
+        font-size: 1em;
+    }
+
+    .afirmacao-box {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .opcoes li {
+        padding: 6px;
+        margin-bottom: 0.8em;
+    }
+
+    .opcao-letra {
+        font-size: 0.9em;
+    }
+
+    .feedback-area {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+}
