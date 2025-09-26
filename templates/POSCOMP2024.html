@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POSCOMP 2023</title>
+    <title>POSCOMP 2024</title>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='stylePOSCOMP2023.css')}}">
@@ -20,7 +20,7 @@
                 <li><a href="{{url_for('POSCOMP2023')}}">2023</a></li>
                 <li><a href="{{url_for('POSCOMP2022')}}">2022</a></li>
                 <li><a href="#">2021</a></li>
-                <li><a href="#">2020</a></li>
+                <li><a href="{{url_for('POSCOMP2020')}}">2020</a></li>
                 <li><a href="{{url_for('sobre')}}">Sobre</a></li>
             </ul>
         </aside>
@@ -392,6 +392,828 @@
     FUNDAMENTOS DA COMPUTAÇÃO
     </h1>  
 
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 21 – Considere o problema de acessar os registros de um arquivo. Cada registro contém uma chave única que é utilizada para recuperar os registros do arquivo. Dada uma chave qualquer, o problema consiste em localizar o registro que contenha essa chave. O algoritmo examina os registros na ordem em que eles aparecem no arquivo, até que o registro procurado seja encontrado ou fique determinado que ele não se encontra no arquivo. Seja \( f \) uma função de complexidade tal que \( f(n) \) é o número de registros consultado no arquivo, é correto afirmar que:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> O caso médio \( \hat{e} f(n) = (n + 1)/2 \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O melhor caso \( \hat{e} f(n) = n - 1 \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> O caso ótimo \( \hat{e} f(n) = 3n/2 - 3/2 \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> O caso recorrente \( \hat{e} f(n) = 2(n - 1) \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O pior caso \( \hat{e} f(n) = 1 \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 22 – Qual é o objetivo da análise assintótica de algoritmos?
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Analisar conjuntamente o pior caso e o caso médio de um algoritmo. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Analisar o desempenho do algoritmo para entradas muito pequenas. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Determinar o desempenho do algoritmo para todas as possíveis entradas. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Analisar o desempenho do algoritmo para entradas médias. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Analisar o comportamento do algoritmo à medida que o tamanho da entrada aumenta indefinidamente. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 23 – Assinale a alternativa que apresenta a complexidade de tempo da busca em uma tabela hash, considerando a complexidade média e do pior caso, respectivamente.
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> O(1) e O(1). </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O(1) e O(n). </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> O(log n) e O(log n). </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> O(log n) e O(n). </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O(n) e O(2<sup>n</sup>). </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 24 – Em uma estrutura de dados lista _____, cada elemento armazena um ou vários dados e um ponteiro para o próximo elemento, que permite o encadeamento e mantém a estrutura linear. Tem-se também um campo-chave através do qual uma determinada ordenação é mantida.
+    </p>
+    <p>Assinale a alternativa que preenche corretamente a lacuna do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> duplamente encadeada ordenada </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> circular não ordenada </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> de prioridades </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> duplamente encadeada não ordenada </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> simplesmente encadeada ordenada </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 25 – Sobre as instruções de repetição de uma linguagem de programação, assinale a alternativa correta.
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Na instrução <strong>while (condição) instrução</strong>, a instrução é executada uma ou mais vezes e a condição é testada depois da instrução. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O corpo do laço <strong>do...while</strong> é executado pelo menos uma vez, enquanto nos laços <strong>while e for</strong> o corpo do laço pode nunca ser executado (caso a condição seja falsa a priori). </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> A instrução <strong>if</strong> adapta-se a situações em que o número de iterações é conhecido a priori. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> A instrução <strong>break</strong>, quando presente dentro de um laço de repetição, passa o laço para a próxima iteração. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Na instrução <strong>for (carga inicial; condição; pos-instrução) instrução</strong>, a instrução é executada zero ou mais vezes e a condição é testada depois da instrução. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 26 – No caminhamento ______ de uma árvore \( T \), a raiz de \( T \) é visitada em primeiro lugar, e então as subárvores enraizadas nos seus filhos são percorridas recursivamente. Se a árvore é ordenada, então as subárvores são percorridas de acordo com a ordem dos filhos.
+    </p>
+    <p>Assinale a alternativa que preenche corretamente a lacuna do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> simétrico </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> em largura </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> central </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> pré-fixado </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> pós-fixado </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 27 – Considerando uma memória cache que usa mapeamento por conjunto associativo que contém 64 linhas divididas em 16 conjuntos, e uma memória principal que contém 4K blocos de 128 palavras cada, quantos bits serão necessários para endereçar uma palavra e qual tamanho, também em bits, dos campos endereço, tag, s, d e w?
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Endereço total de 19 bits, com tag = 8 bits, s = 12 bits, d = 4 bits e w = 7 bits. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Endereço total de 19 bits, com tag = 12 bits, s = 7 bits, d = 4 bits e w = 12 bits. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Endereço total de 23 bits, com tag = 7 bits, s = 4 bits, d = 7 bits e w = 12 bits. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Endereço total de 19 bits, com tag = 8 bits, s = 12 bits, d = 7 bits e w = 4 bits. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Endereço total de 21 bits, com tag = 4 bits, s = 5 bits, d = 7 bits e w = 9 bits. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 28 – A ponte norte e a ponte sul são chipsets que compõem a estrutura de uma placa-mãe de um computador. Sobre esses dois chipsets, analise as assertivas abaixo:
+    </p>
+    <p>I. A ponte norte é responsável pela comunicação entre o processador e dispositivos de entrada/saída de baixa velocidade, enquanto a ponte sul conecta a memória RAM e a placa de vídeo.</p>
+    <p>II. A ponte sul conecta o processador diretamente à memória RAM e à placa de vídeo, enquanto a ponte norte lida com dispositivos de armazenamento e periféricos de entrada/saída.</p>
+    <p>III. A ponte norte faz a interface entre o processador e componentes de alta velocidade como a memória RAM e a placa de vídeo, enquanto a ponte sul gerencia conexões com dispositivos de entrada/saída de menor velocidade.</p>
+    <p>IV. A ponte norte e a ponte sul são substituíveis e podem ser usadas indistintamente em qualquer função dentro do sistema de barramento do computador.</p>
+    <p>Quais estão corretas?</p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas I e II. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Apenas III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 29 – Qual dos seguintes métodos permite a transferência de dados entre um dispositivo de entrada e saída e a memória principal sem o intermédio da CPU?
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Polling. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Interrupções. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> E/S mapeada em memória. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Direct Memory Access (DMA). </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> E/S programada. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 30 – Dada a função \( F(A,B,C) = AC + ABC + A(B + C) \), assinale a alternativa que contém a expressão lógica de \( F(A,B,C) \), utilizando a notação canônica da soma de mintermos.
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \(\sum m(5, 6, 7, 8)\) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \(\sum m(0, 1, 2, 3)\) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \(\sum m(4, 5, 6, 7)\) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \(\sum m(1, 2, 5, 6, 7)\) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \(\sum m(0, 3, 4, 5, 6, 7)\) </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 31 – Dada a função F(W, X, Y, Z) composta dos termos mínimos (minterm) = {4, 8, 9, 10, 13, 14} e dos termos não essenciais (don't care) = {5, 6, 7}, simplifique essa função como produto de somas.
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> (W+X)*(W+X+Y+Z)*(Y+Z) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> (W+X+Z)*(W+X+Z)*(W+X)*(Y+Z) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> (W+X)*(W+Y+Z)*(W+Y+Z)*(W+X+Y) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> (W+X)*(W+Y+Z) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> (W+X)*(W+Y+Z)*(W+X+Y+Z) </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 32 – Analise a figura abaixo:
+    </p>
+    <img class="questao27" src="{{url_for('static', filename = 'quest32POS2024.PNG')}}" />
+    <p>Qual é o tipo da máquina de estados finitos apresentada e o que faz o circuito correspondente à máquina de estados finitos?</p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Máquina de Mealy que computa um somador serial. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Máquina de Mealy que detecta dois 1’s seguidos. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Máquina de Moore que detecta quando as entradas são diferentes. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Máquina de Moore que computa um somador serial. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Máquina de Moore que detecta dois 1’s seguidos. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 33 – Analise o código em Linguagem C (Compilador Ansi C) abaixo:
+    </p>
+    <pre>
+int main() {
+    int valor1 = 12;
+    int *valor2;
+    int cont = 0;
+    valor2 = &valor1;
+
+    do{
+        valor1 >>= 1;
+        cont++;
+    }
+    while (*valor2>0);
+    printf("%d",cont);
+}
+    </pre>
+    <p>A saída do programa na tela é o número:</p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 2. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 3. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 4. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 5. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 6. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 34 – Analise o código em Linguagem C (Compilador Ansi C) abaixo:
+    </p>
+    <pre>
+int f_rec(char s[]) {
+    if (s[0] == '\0') {
+        return 0;
+    }
+    return 1 + f_rec(s + 1);
+}
+
+int main() {
+    char str[] = "Ola mundo!";
+    int var = f_rec(str);
+    double resultado = var / 2;
+    printf("%f\n", resultado);
+    return 0;
+}
+    </pre>
+    <p>Considerando o código apresentado, assinale a alternativa correta.</p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> A saída é o número de caracteres de "str" dividido por 2, mostrado como um número de ponto flutuante. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> A saída é o número de caracteres de "str" dividido por 2, mostrado como um inteiro. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> O código tem um erro de tipos porque a função f_rec não pode aceitar um char array. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> O código tem um erro de tipos porque var é um inteiro, mas é usado em uma operação de divisão com double. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O código tem um erro de tipos porque a função printf está usando o especificador de formato errado. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 35 - Analise o seguinte diagrama de classes da UML (Linguagem de Modelagem Unificada) e assinale a alternativa que contém o(s) elemento(s) polimórfico(s).
+    </p>
+    <img class="questao27" src="{{url_for('static', filename = 'quest35POS2024.PNG')}}" />
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> A relação entre as classes Ponto e Quadro. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Os atributos -x e -y da classe Ponto. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Os métodos +getX() e +getY() da classe Ponto. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Os métodos +print() das classes Ponto e Círculo. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O método +setRaio() da classe Círculo. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 36 – Qual das seguintes linguagens pode ser gerada por uma gramática regular?
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> {w ∈ {a, b}* | o número de a’s em w é maior que o número de b’s}. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> {w ∈ {a, b}* | o número de a’s em w é o dobro do número de b’s}. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> {w ∈ {a, b}* | o número de a’s em w é divisível por 3 e o número de b’s é ímpar}. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> {w ∈ {a, b}* | w contém o mesmo número de a’s e b’s}. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> {w ∈ {a, b}* | w contém números diferentes de a’s e b’s}. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 37 – Sobre as linguagens formais, os autômatos e a computabilidade, analise as assertivas abaixo:
+    </p>
+    <p>I. Um autômato finito não determinístico pode ter transições vazias (ε-transições), enquanto um autômato finito determinístico não pode.</p>
+    <p>II. As Máquinas de Turing são sempre determinísticas.</p>
+    <p>III. O autômato com pilha aceita a classe de linguagens regulares.</p>
+    <p>IV. Os problemas NP-completos são um subconjunto dos problemas NP.</p>
+    <p>Quais estão corretas?</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas IV. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I e II. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e III. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Apenas III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 38 – O ______, de ______, demonstra limitações dos sistemas formais e a impossibilidade de provar certas afirmações dentro deles. Já o ______, de ______, pergunta se um determinado programa irá eventualmente parar ou entrar em um loop infinito para uma entrada dada. Ambos os resultados destacam a existência de limites fundamentais para o que podemos provar em sistemas formais ou calcular em sistemas computacionais.
+    </p>
+    <p>Assinale a alternativa que preenche, correta e respectivamente, as lacunas do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Teorema da Incompletude – Alan Turing – Problema da Parada – Kurt Gödel </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Teorema da Incompletude – Kurt Gödel – Problema da Parada – Alan Turing </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Problema da Parada – Alan Turing – Teorema da Incompletude – Kurt Gödel </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Problema da Parada – Kurt Gödel – Teorema da Incompletude – Alonzo Church </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Teorema da Incompletude – Alonzo Church – Problema da Parada – Alan Turing </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 39 – Considerando o conceito de arquivos e registros, assinale a alternativa correta sobre a estrutura de armazenamento e recuperação de informações em memória secundária.
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Um arquivo é um conjunto de dados de diferentes tipos, e cada item individual de informação dentro de um arquivo é chamado de byte. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Um programa não pode ser considerado um arquivo, pois ele é executável e não segue a mesma estrutura de arquivos de dados. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Na memória secundária, o sistema operacional armazena informações em grupos, chamados blocos, para aumentar a eficiência na transferência de dados entre a memória secundária e a memória principal. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> A estrutura de armazenamento em memória secundária não utiliza o conceito de arquivos e registros, mas sim páginas e segmentos. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Na memória secundária, os dados são armazenados exclusivamente em formato não hierárquico, o que impede a organização dos arquivos em pastas ou diretórios. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 40 – Considerando a compressão de dados, assinale a alternativa correta.
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> A compressão de dados pode ser alcançada atribuindo descrições curtas aos resultados mais frequentes da fonte de dados e necessariamente descrições mais longas aos resultados menos frequentes. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> A compressão de dados pode ser alcançada atribuindo descrições de comprimento uniforme a todos os resultados da fonte de dados. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> A desigualdade de Kraft afirma que os comprimentos dos códigos não precisam seguir qualquer padrão específico. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> A codificação de Huffman é uma técnica fundamental em compressão de dados que minimiza o tamanho da mensagem codificada, porém tem perda de informação. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> A compressão de dados sempre resulta em uma perda de qualidade, independentemente do algoritmo utilizado. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 41 – Considerando o papel de um esquema de classificação em sistemas de gestão de registros, analise as assertivas abaixo e assinale a alternativa correta.
+    </p>
+    <p>I. O esquema apenas determina a identidade dos arquivos em sistemas baseados em papel.</p>
+    <p>II. Esquemas de classificação são irrelevantes para a conformidade regulatória e legal em sistemas de gestão de registros.</p>
+    <p>III. O esquema determina a identidade e o lugar de cada arquivo, tanto em sistemas baseados em papel quanto em sistemas de registros eletrônicos, e em sistemas híbridos onde ambos existem.</p>
+    <p>IV. A classificação em sistemas de gestão de registros é realizada apenas no momento da criação do registro e nunca é revisada ou atualizada posteriormente.</p>
+    <p>V. Todos os sistemas de gestão de registros utilizam exclusivamente métodos manuais para a classificação de documentos, garantindo assim maior precisão e controle.</p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Todas as assertivas estão corretas. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Todas as assertivas estão incorretas. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas a assertiva III está correta. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas a assertiva V está correta. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Apenas as assertivas II e IV estão corretas. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 42 – No sistema operacional, o gerenciamento de E/S é implementado em várias camadas. Um dispositivo de E/S notifica que realizou uma operação se comunicando diretamente com a camada de _____, usualmente via APIC, a qual informa a camada de _____ sobre o resultado da operação. Quando o sistema operacional precisa programar o dispositivo de E/S para realizar uma operação, a camada de _____ se comunica diretamente com o dispositivo.
+    </p>
+    <p>Assinale a alternativa que preenche, correta e respectivamente, as lacunas do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> controladores de dispositivo – chamada de sistemas – tratadores de interrupção </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> tratadores de interrupção – controladores de dispositivo – chamada de sistemas </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> software independente de dispositivo – tratadores de interrupção – controladores de dispositivo </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> controladores de dispositivo – software independente de dispositivo – chamada de sistemas </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> tratadores de interrupção – controladores de dispositivo – controladores de dispositivo </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 43 – Analise a execução a seguir considerando que todos os arquivos de cabeçalho necessários estão inclusos no tempo de compilação e que o programa executa ininterruptamente do início até o seu término.
+    </p>
+    <pre>
+int lbm = 0;
+
+void * func(void *i){ lbm = lbm + 1; }
+
+int main (void){
+    int i;
+    pthread_t t[10];
+
+    for(i=0;i<10;i++){
+        pthread_create(&t[i], NULL, func, NULL);
+    }
+
+    for(i=0;i<10;i++){
+        pthread_join(t[i], NULL);
+    }
+
+    printf("%d", lbm);
+}
+    </pre>
+    <p>Assinale a alternativa que melhor representa o resultado da execução do programa acima.</p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> lbm = 1 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> lbm = 9 </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> lbm ≤ 10 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> lbm = 10 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> lbm ≥ 10 </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 44 – Um computador precisa ter seu disco atual, formatado com uma única partição, substituído por outro disco. Antes de realizar a troca, foi realizada uma análise do tamanho dos arquivos armazenados no disco atual, cujo resultado indicou que 98% dos arquivos possuem tamanho entre 1.000 bytes e 2.030 bytes (mediana de 1.515 bytes). Assinale a alternativa que lista os parâmetros de formação do novo disco e que resulte no menor desperdício de espaço físico e menor probabilidade de fragmentação do disco.
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Tamanho de bloco = 1.024 bytes e sistema de arquivos baseado em alocação encadeada. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Tamanho de bloco = 1.024 bytes e sistema de arquivos baseado em alocação contígua. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Tamanho de bloco = 1.024 bytes e sistema de arquivos baseado em alocação indexada. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Tamanho de bloco = 2.048 bytes e sistema de arquivos baseado em alocação encadeada. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Tamanho de bloco = 2.048 bytes e sistema de arquivos baseado em alocação contígua. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 45 – Sobre os tipos de dados básicos, assinale a alternativa correta.
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> As variáveis do tipo inteiro são utilizadas para armazenar valores que pertencem ao conjunto de números naturais (sem parte fracionária) positivos e negativos. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O tipo caractere permite armazenar strings ou conjuntos de caracteres em uma variável do tipo carácter. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Por padrão, uma variável do tipo inteiro admite somente valores positivos. Caso se deseje que a variável contenha valores negativos, é necessário utilizar o comando da linguagem de programação para incluir sinal. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> As variáveis do tipo vetor são utilizadas para armazenar valores numéricos com parte fracionária. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O conjunto de operações disponível para o tipo caractere inclui soma, subtração, multiplicação, divisão inteira e resto da divisão. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 46 – Analise as assertivas abaixo sobre estruturas em linguagens de programação:
+    </p>
+    <p>I. Uma estrutura é um conjunto de uma ou mais variáveis agrupadas sob um único nome, de forma a facilitar a sua referência.</p>
+    <p>II. A declaração de uma estrutura corresponde unicamente à definição de um novo tipo (isto é, da sua estrutura), e não à declaração de variáveis do tipo da estrutura.</p>
+    <p>III. Uma estrutura pode conter, na sua definição, variáveis simples, vetores, ponteiros ou mesmo outras estruturas.</p>
+    <p>IV. As estruturas permitem agrupar diversos componentes em uma única variável, que podem ser definidos com tipos distintos.</p>
+    <p>Quais estão corretas?</p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I e II. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas III e IV. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I, II e III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II, III e IV. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II, III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 47 – Analise o texto a seguir, que descreve um programa que solicita um salário ao usuário e mostra o imposto a pagar:
+    </p>
+    <p>- Se o salário for negativo ou zero, mostre o erro respectivo.<br>
+       - Se o salário for maior que 1000, paga 10% de imposto, se não paga apenas 5%.</p>
+    <p>Para resolver o problema descrito acima, qual instrução deve ser utilizada?</p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Laço encadeado. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Atribuição composta. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Laço infinito. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Condicional encadeada. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Atribuição simples. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 48 – Um mapa de cidade pode ser modelado como um grafo cujos vértices são cruzamentos ou finais de ruas e cujas arestas podem ser trechos de ruas sem cruzamento. Esse grafo tem arestas não dirigidas, representando ruas de dois sentidos, e arestas dirigidas, correspondendo a trechos de um único sentido. Assim, um grafo que representa as ruas de uma cidade é um:
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Dígrafo. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Grafo completo. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Grafo misto. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Bígrafo. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Grafo simétrico. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 49 – A definição de um grafo agrupa arestas como uma coleção, não como um conjunto, permitindo que duas arestas não dirigidas tenham os mesmos pontos finais e que duas arestas dirigidas tenham a mesma origem e o mesmo destino. Tais arestas são chamadas de:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Paralelas. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Laços. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Adjacentes. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Incidentes. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Finais. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 50 – Um ______ é um caminho em que os vértices de início e fim são os mesmos.
+    </p>
+    <p>Assinale a alternativa que preenche corretamente a lacuna do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> arco </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> ciclo </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> caminho simples </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> laço </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> k-cubo </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<h1 class="container-titulo">
+    TECNOLOGIA DE COMPUTAÇÃO
+</h1>  
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 51 – Em um banco de dados relacional, considere um esquema de relação para um conjunto de itens, que define uma hierarquia pertinente à composição de peças de uma máquina, a saber: ITEM (Id, Nome, Fk); o atributo ID é a chave primária de ITEM; o atributo Nome rotula o item; o atributo Fk é uma chave estrangeira em ITEM, que determina o item ascendente imediato na hierarquia. Em determinado momento, o conjunto de tuplas em ITEM é: (1, 'Item 1', NULL); (2, 'Item 2', 1); (3, 'Item 3', 1); (4, 'Item 4', 3). Seja uma consulta escrita em SQL, conforme apresentada abaixo:
+    </p>
+    <p>SELECT FILHO.Id, FILHO.Nome, PAI.Id, PAI.Nome FROM ITEM AS FILHO RIGHT OUTER JOIN ITEM AS PAI ON FILHO.Fk = PAI.Id</p>
+    <p>Ao executar essa consulta, a relação resultante possui:</p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 2 tuplas. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 3 tuplas. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 4 tuplas. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 5 tuplas. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 6 tuplas. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 52 – Deadlock (impasse) de transações de banco de dados ocorre quando, em um conjunto de n (n>1) transações ativas, é caracterizado um ciclo de espera: T₁ espera por T₂; T₂ espera por T₃; ⋯; Tₙ-1 espera por Tₙ; e Tₙ espera por T₁. Entre as estratégias de tratamento de deadlock a seguir, aquela que é um protocolo de detecção (em vez de prevenção) é denominada:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Espera cautelosa. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Grafo de espera. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Sem espera. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Esperar ou morrer. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Ferir ou esperar. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 53 – Árvores B e B⁺ são árvores de busca empregadas à implementação de estruturas de indexação, conforme a literatura na área de banco de dados. Essencialmente, a pesquisa nessas árvores objetiva encontrar o(s) endereço(s) do(s) bloco(s) de dados onde estão os dados que atendem ao predicado de busca. Em outras palavras, há o ponteiro de árvore, que define a hierarquia entre os nós da arvore, e o ponteiro de dados, que possui o endereço de bloco de dados. Quanto à estrutura das árvores B e B⁺, é possível abstrair quatro tipos de nós:
+    </p>
+    <p>I. Nós internos na árvore B.<br>
+       II. Nós folha na árvore B.<br>
+       III. Nós internos na árvore B⁺.<br>
+       IV. Nós folha na árvore B⁺.</p>
+    <p>Entre os tipos apresentados, são nós que possuem ponteiros de dados:</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I, II e III. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas I, II e IV. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I, III e IV. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II, III e IV. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II, III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 54 – No contexto da construção de compiladores, um Esquema de Tradução é um(a):
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Grafo que relaciona atributos entre regras de produção diferentes de uma gramática livre de contexto. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Sequência de ações que descreve informalmente o funcionamento de todas as etapas do compilador. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Técnica de recuperação de erros que consiste em obter estruturas de controle semanticamente equivalentes às definidas pelo programador. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Forma de análise semântica, que considera o tipo das variáveis dos programas, de forma a evitar erros nos programas gerados. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Gramática livre de contexto na qual fragmentos de programas (ações) são inseridos nos lados direitos das regras de produção. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 55 – Sobre representação intermediária no contexto da construção de compiladores, analise as assertivas abaixo:
+    </p>
+    <p>I. Árvores sintáticas e código de três endereços são dois tipos de representações intermediárias.</p>
+    <p>II. Os enunciados que aparecem no código de três endereços têm a forma geral \( x := y \textit{op} z \), nos quais \( x, y \) e \( z \) são nomes, constantes ou objetos temporários criados pelo compilador. Outras formas podem também ser usadas, incluindo desvios condicionais e incondicionais, entre outros tipos de enunciados.</p>
+    <p>III. Representações intermediárias podem ser produzidas usando Definições Dirigidas pela Sintaxe.</p>
+    <p>IV. Autômatos finitos são usados na definição de representações intermediárias, sendo que os estados do autômato representam as variáveis do programa e as transições representam instruções do código intermediário.</p>
+    <p>Quais estão corretas?</p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas I e II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas II e IV. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas I, II e III. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II, III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 56 – Analise as matrizes de transformações geométricas A e B.
+    </p>
+    <img class="questao27" src="{{ url_for('static', filename='quest56POS2024.png') }}" alt="Questão 56">
+    
+    <p>Considerando que \( E_x \) e \( E_y \) são fatores de escala, \( T_x \) e \( T_y \) são fatores de translação e que \( \theta \) representa um ângulo de rotação, analise as assertivas a seguir:</p>
+    <p>I. A transformação \( A \) rotaciona o objeto com pivô no centro de massa do próprio objeto.</p>
+    <p>II. A transformação \( B \) primeiro escala e depois translada o objeto.</p>
+    <p>III. O uso da coordenada homogênea tanto para a transformação \( A \) quanto para \( B \) é necessário, pois sem ela não é possível a realização de tais transformações.</p>
+    <p>Quais estão corretas?</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I e III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e III. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 57 – Analise as assertivas abaixo sobre técnicas de renderização e iluminação e assinale a alternativa correta.
+    </p>
+    <p>I. Ray Tracing é uma técnica que visa simular a propagação da luz no ambiente, avaliando a sua interação com os objetos que o compõem e considerando a interação da luz com as suas superfícies. Esta técnica é frequentemente utilizada em jogos digitais, dado o seu grau de realismo e o fato de a velocidade de renderização ser eficiente para aplicações de tempo real.</p>
+    <p>II. Z-Buffer é uma técnica que visa armazenar a profundidade dos objetos em relação à câmera, fazendo com que se grave, para cada pixel, qual objeto está mais distante. Essa técnica é utilizada para reduzir o tempo de rendering, especialmente para aplicações que exigem muito do hardware, como no caso das cenas ultrarrealistas geradas no âmbito cinematográfico, uma vez que essa técnica representa o estado da arte da geração de cenas tridimensionais ultrarrealistas.</p>
+    <p>III. O Modelo de Reflexão de Phong é utilizado para renderização da iluminação de objetos. Sua característica principal é a combinação da reflexão difusa, especular e ambiente para formar uma iluminação mais realista. Como esta é uma técnica de iluminação global e considera o cálculo tanto da incidência de luz direta quanto indireta, não é muito utilizada em jogos digitais ou aplicações de tempo real, devido ao seu alto custo de tempo de processamento.</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Todas as assertivas estão corretas. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Todas as assertivas estão incorretas. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas as assertivas I e II estão corretas. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas as assertivas I e III estão corretas. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Apenas as assertivas II e III estão corretas. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 58 – De acordo com o livro “Engenharia de Software – Uma Abordagem Profissional”, de Roger S. Pressman e Bruce R. Maxim, a qualidade de software pode ser definida como “uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável para aqueles que o produzem e para aqueles que o utilizam”. O resultado final de termos um software de alta qualidade, segundo os autores, são os seguintes, EXCETO:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Aumentar a complexidade dos processos de negócios. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Gerar maior receita pelo produto de software. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Obter maior rentabilidade, quando uma aplicação suporta um processo de negócio. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Obter maior disponibilidade de informações cruciais para o negócio. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Obter menor exigência de manutenção, menos correções de erros e menos suporte ao cliente. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 59 – De acordo com o livro “Engenharia de Software”, de Ian Sommerville, “um processo de software é um conjunto de atividades relacionadas que levam à produção de um sistema de software”. De acordo com o autor, a definição abaixo refere-se a qual das quatro atividades fundamentais de engenharia de software?
+    </p>
+    <p>– “É o processo de entender e definir quais serviços são exigidos do sistema e identificar as restrições na operação e no desenvolvimento do sistema”.</p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Desenvolvimento de software. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Validação de software. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Evolução de software. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Especificação de software. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Projeto de software. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 60 – Sobre gerenciamento de configuração de software, de acordo com o livro “Engenharia de Software – Uma Abordagem Profissional”, de Roger S. Pressman e Bruce R. Maxim, analise as assertivas abaixo e assinale a alternativa correta.
+    </p>
+    <p>I. Os elementos que constituem todas as informações geradas durante o processo de software são conhecidos coletivamente como configuração de software.</p>
+    <p>II. À medida que o trabalho de engenharia de software progride, forma-se uma hierarquia de itens de configuração de software.</p>
+    <p>III. O gerenciamento de configuração de software consiste em um conjunto de atividades realizadas para administrar as mudanças ao longo de todo o ciclo de vida de um software.</p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Todas as assertivas estão corretas. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Todas as assertivas estão incorretas. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas as assertivas I e II estão corretas. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas as assertivas I e III estão corretas. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Apenas as assertivas II e III estão corretas. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 61 – Em um Algoritmo Genético (AG), é correto afirmar que o operador de crossover é responsável por:
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Avaliar a aptidão de cada indivíduo na população. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Manter os melhores indivíduos de uma geração para a próxima. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Modificar aleatoriamente os genes de um indivíduo para explorar novas soluções. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Selecionar os indivíduos que participarão do processo de reprodução. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Combinar partes dos cromossomos de dois pais para criar descendentes. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 62 – Em relação aos Sistemas Especialistas, assinale a alternativa que melhor descreve o papel do motor de inferência.
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> O motor de inferência atua principalmente na otimização de algoritmos de aprendizado de máquina dentro do sistema. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O motor de inferência é responsável por gerenciar a interface de usuário do sistema, garantindo uma interação eficiente com especialistas humanos. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> O motor de inferência utiliza as regras definidas na base de conhecimento para derivar conclusões a partir de fatos específicos, simulando o raciocínio humano especializado. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> O motor de inferência substitui a necessidade de uma base de conhecimento, operando com base em dados brutos e estatísticas. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O motor de inferência serve exclusivamente para a manutenção e atualização automática da base de dados, sem envolvimento direto no processo de raciocínio. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 63 – Após a captura de uma imagem por sensores, uma imagem digital é criada a partir do processo de digitalização, que envolve duas etapas: a _____, que realiza a discretização das coordenadas no domínio espacial, e a _____, que realiza a discretização dos valores de amplitude dos pixels.
+    </p>
+    <p>Assinale a alternativa que preenche, correta e respectivamente, as lacunas do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> interpolação – ampliação </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> modulação – codificação </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> quantização – amostragem </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> amostragem – quantização </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> codificação – modulação </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 64 – Analise as assertivas abaixo sobre filtragem de imagens digitais:
+    </p>
+    <p>I. A aplicação de um filtro espacial de média em uma imagem digital resulta na sua suavização.</p>
+    <p>II. A aplicação de um filtro de frequência do tipo passa-baixa em uma imagem digital resulta no seu aguçamento.</p>
+    <p>III. A aplicação de um filtro espacial utilizando o operador laplaciano em uma imagem digital resulta no seu aguçamento.</p>
+    <p>IV. Para a suavização de uma imagem digital, são utilizados apenas filtros no domínio espacial e para o aguçamento de uma imagem digital, são utilizados apenas filtros do domínio das frequências.</p>
+    <p>Quais estão corretas?</p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I e II. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas I e III. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas II e III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e IV. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II, III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 65 – Um roteador recebe um pacote com IP de origem 13.1.2.3 e IP de destino 11.1.2.5.  
+        Em qual rota ele encaminhará o pacote?
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 13.0.0.0/8 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 13.1.0.0/16 </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 11.1.0.0/16 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 13.1.2.0/24 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 11.1.2.0/24 </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 66 – Assinale a alternativa correta.
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> O protocolo IP é baseado em datagramas e orientado à conexão. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O protocolo IP funciona segundo melhor esforço possível garantindo a entrega de mensagens. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> O protocolo IP é conhecido como a cola da Internet porque ele permite que outros protocolos sejam usados no seu lugar. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Várias cópias de um pacote IP podem ser entregues. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> O datagrama IP identifica o destinatário através dos campos porta de destino e número IP de destino. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 67 – Qual protocolo da camada de transporte o DNS (Domain Name Service) utiliza para consultas regulares?
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> TCP </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> TCP/IP </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> HTTP </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> CoAP </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> UDP </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 68 – Os programas dos clientes não devem conhecer a distribuição de arquivos. Um único conjunto de operações é fornecido para acesso a arquivos locais e remotos. Os programas escritos para operar sobre arquivos locais são capazes de acessar arquivos remotos sem modificação. Qual é o requisito de transparência descrito para os serviços de arquivos em sistemas distribuídos?
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Localização. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Acesso. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Mobilidade. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Desempenho. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Mudança de escala. </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 69 – Uma falha ______ ocorre quando um servidor para abruptamente, mas estava funcionando corretamente até parar. Um aspecto importante é que, uma vez que o servidor pare, nada mais se ouve dele. Um exemplo típico é um sistema operacional que para de repente e para o qual só há uma única solução: reinicializá-lo.
+    </p>
+    <p>Assinale a alternativa que preenche corretamente a lacuna do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> por omissão </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> de temporização </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> de resposta </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> arbitrária </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> por queda </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
+
+<div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 70 – O algoritmo de exclusão mútua ______ requer apenas três mensagens para entrar e sair de uma região crítica: uma requisição, uma permissão para entrar e uma liberação para sair.
+    </p>
+    <p>Assinale a alternativa que preenche corretamente a lacuna do trecho acima.</p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> centralizado </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> descentralizado </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> distribuído </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> token-ring </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> relógios vetoriais </li>
+    </ul>
+    <div class="feedback-area"></div>
+</div>
 
 </div><!--div da questão container-->
 

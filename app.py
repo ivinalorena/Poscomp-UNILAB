@@ -18,6 +18,10 @@ def POSCOMP2023():
 def POSCOMP2024():
     return render_template('POSCOMP2024.html')
 
+@app.route('/POSCOMP2020')
+def POSCOMP2020():
+    return render_template('POSCOMP2020.html')
+
 @app.route('/sobre')
 def sobre():
     return render_template('sobre.html')
@@ -26,4 +30,4 @@ def sobre():
 #    return render_template('POSCOMP2023.html')
 
 if __name__ == '__main__':
-    app.run
+    app.run(debug=True)
