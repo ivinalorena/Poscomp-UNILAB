@@ -130,14 +130,23 @@
         /* Div específica para você inserir cada imagem */
         .image-placeholder {
             width: 25em;
-            height: 100em; /* Altura de exemplo para cada imagem */
+            height: 80em; /* Altura de exemplo para cada imagem */
             border-radius: 15px; /* Bordas arredondadas para o local da imagem */
             display: flex;
-            padding-top: 8em;
             align-items: center;
             justify-content: center;
             color: white;
             font-style: italic;
+            overflow: hidden; /* Esconde partes da imagem que excedem o container */
+        }
+
+        /* Estilo para imagens dentro do placeholder */
+        .image-placeholder img {
+            width: 60%;
+            height: 75%;
+            object-fit: cover; /* Mantém a proporção original da imagem */
+            object-position: center; /* Centraliza a imagem */
+            border-radius: 15px;
         }
         .footer{
             width: 100%;
@@ -194,9 +203,44 @@
 
     /* Container principal em mobile */
     .main-container {
+        flex-direction: column; /* Muda para layout vertical */
         max-width: 100%;
         margin: 0;
         padding: 10px;
+        gap: 20px; /* Reduz o espaço entre imagem e conteúdo */
+    }
+
+    /* Container de conteúdo em mobile */
+    .content-container {
+        max-width: 100%;
+        order: 2; /* Garante que o conteúdo venha depois da imagem */
+    }
+
+    /* Área da imagem em mobile */
+    .image-area {
+        width: 70%;
+        flex-basis: auto;
+        order: 1; /* Garante que a imagem venha primeiro */
+        height: 50px; /* Altura automática para mobile */
+        
+        padding: 15px;
+    }
+
+    /* Placeholder das imagens em mobile */
+    .image-placeholder {
+        width: 10px;
+        height: 10px; /* Altura reduzida para mobile */
+        padding-top: 2em;
+        overflow: hidden;
+    }
+
+    /* Imagens em mobile */
+    .image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding-top: 0; /* Remove padding-top das imagens */
     }
 
     /* Container do título em mobile */
@@ -248,10 +292,21 @@
         padding: 12px;
         font-size: 0.9em;
     }
-    img{
+    /* Títulos em mobile */
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
 
-        width: 50%;
-        height: auto;
+    h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    /* Parágrafos em mobile */
+    p {
+        font-size: 1em;
+        text-align: left;
     }
 }
 
@@ -261,9 +316,48 @@
         padding: 0.5em;
         font-size: 14px;
     }
-    img{
-        width: 50%;
+
+    /* Container principal em mobile pequeno */
+    .main-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px;
+    }
+
+    /* Área da imagem em mobile pequeno */
+    .image-area {
         height: auto;
+        padding: 10px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 12em; /* Altura ainda menor para telas pequenas */
+        padding-top: 1em;
+        font-size: 0.9em;
+        overflow: hidden;
+    }
+
+    /* Imagens em mobile pequeno */
+    .image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding-top: 0;
+    }
+
+    /* Títulos em mobile pequeno */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
     }
 
     .sidebar {
