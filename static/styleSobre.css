@@ -87,7 +87,8 @@ body {
 
 .developer-card {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 20px;
+    margin: 10px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(42, 41, 41, 0.08);
     text-align: center;
