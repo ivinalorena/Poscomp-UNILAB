@@ -10,7 +10,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='icon.png')}}">
 </head>
 <body>
-<!--SIDEBAR-->
     <div class="page-wrapper">
         <aside class="sidebar">
             <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
@@ -25,10 +24,19 @@
             </ul>
         </aside>
 <div class="main-container">
-    <h1 class="container-titulo">
+        <div class="assunto">
+        <h2>Resolver por assunto</h2>
+        <div class="assunto-buttons">
+            <button class="btn-assunto" data-subject="all">Todas as Questões</button>
+            <button class="btn-assunto" data-subject="matematica">Matemática</button>
+            <button class="btn-assunto" data-subject="fundamentos">Fundamentos da Computação</button>
+            <button class="btn-assunto" data-subject="tecnologia">Tecnologia de Computação</button>
+        </div>
+    </div>
+    <h1 class="container-titulo" data-subject="matematica">
         MATEMÁTICA
     </h1>
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 01 – Utilize o método de Eliminação de Gauss para resolver o sistema a seguir:
     </p>
@@ -44,10 +52,10 @@
         <li data-option="D"> <span class="opcao-letra">D)</span> (2, 1, 2) </li>
         <li data-option="E"> <span class="opcao-letra">E)</span> (-1, -1, -1) </li>
     </ul>
-    <div class="feedback-area">
-    </div>
+    <div class="feedback-area"></div>
+</div>
 
-    <div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 02 – Determine o valor de x para que o vetor (1, x, 5) ∈ R³ pertença ao subespaço  
         &lt;(1, 2, 3), (1, 1, 1)&gt;
@@ -61,7 +69,8 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 03 – Determine o polinômio característico de J:
     </p>
@@ -82,7 +91,7 @@
     </ul>
     <div class="feedback-area"></div>
     </div>
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 04 – Nos jogos da Mega-Sena, são sorteados a cada concurso 6 números no intervalo de 1 a 60. Leva o prêmio quem acertar os 6 números sorteados. O apostador, ao fazer um jogo, pode optar por preencher um bilhete com 6, 7, 8 ou 9 números escolhidos. Se o apostador registra um bilhete com 8 números escolhidos, quantos bilhetes de 6 números ele faria com os mesmos 8 números escolhidos?
         </p>
@@ -95,7 +104,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 05 – Recentemente, com a pandemia de Covid-19, houve grande interesse em determinar conjuntos de regiões (de países, estados, municípios, etc.) com alta incidência da doença, com o objetivo de determinar políticas de mitigação da doença nesses locais. Nesse sentido, dado um mapa subdividido em regiões, um cluster é definido como sendo um subconjunto de regiões desse mapa (nesse caso, pode ser formado por regiões que não fazem fronteira entre si). Qual o número de possíveis clusters para um mapa com 10 regiões?
     </p>
@@ -108,7 +117,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 06 – Um anagrama é uma nova palavra formada pela permutação de letras de uma palavra. Essa nova palavra não precisa fazer sentido. Um anagrama de POSCOMP, por exemplo, seria MOCPSOP. Quantos são os anagramas da palavra POSCOMP?
     </p>
@@ -121,7 +130,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 07 – Calcule o  
         \[\lim_{x \to 10^{-3}} \log(10 \cdot x).\]
@@ -135,7 +144,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 08 – Determine os intervalos da função \( f(x) = 5x^2\sqrt{x+1} \).
     </p>
@@ -148,7 +157,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 09 – Calcule o vetor gradiente da função \( f(x, y) = e^{-x} \text{sen}(x + y) \) no ponto \( P(0, \pi) \).
     </p>
@@ -161,7 +170,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 10 – Dados os vetores u(3, 3, 2), v(5, -2, 1) e w(1, -1, 0), calcule a e b tal que u = av + bw.
     </p>
@@ -174,7 +183,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 11 – Calcule o vetor diretor da interseção dos seguintes planos:
     </p>
@@ -191,7 +200,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 12 – Determine a distância aproximada entre o ponto J(3, 1) e a reta s : \( 6x - 2y + 11 = 0 \).
     </p>
@@ -204,7 +213,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 13 – Analise a seguinte proposição: "Existe pelo menos uma universidade em que todos os cursos têm, pelo menos, 100 alunos". A negação dessa proposição é logicamente equivalente à proposição:
     </p>
@@ -217,7 +226,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 14 – Sendo p e q proposições simples, considere a proposição composta E(p,q), cujos valores lógicos estão na tabela verdade a seguir:
         <br><img class = "questao27" src="{{url_for ('static', filename = 'quest14poscomp2023.PNG')}}"><br>
@@ -233,7 +242,7 @@
     <div class="feedback-area"></div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 15 – A expressão lógica \( p \rightarrow q \) é equivalente a:
     </p>
@@ -247,7 +256,7 @@
     <div class="feedback-area"></div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 16 – Utilizando as leis de De Morgan, obtenha uma expressão em forma de somas de produtos para a seguinte função:
         <br><br>
@@ -262,7 +271,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container" style="border: 2px dashed #ff0000;">
+<div class="questao-container" data-subject="matematica" style="border: 2px dashed #ff0000;">
     <p class="questao-titulo" style="color: #ff0000;">
         QUESTÃO 17 – A partir do seguinte circuito, apresentado na Figura 1, obtenha a equação de saída em soma de produtos (simplifique por álgebra de Boole). (QUESTÃO ANULADA)
     </p>
@@ -280,7 +289,7 @@
         <p class="anulada-mensagem">Questão ANULADA: O diagrama do circuito não foi fornecido, impossibilitando a determinação da equação lógica correta.</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 18 – Usando os conjuntos de dados A = {1, 4, 2, 6, 8, 10}, B = {1, 4, 6, 10}, C = {6, 4, 1, 10}, D = {6, 4, 1}, qual das seguintes alternativas é INCORRETA?
     </p>
@@ -293,7 +302,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 19 – Com base na Tabela 1, calcule a média da seguinte amostra de número de filhos que têm as famílias que participaram da enquete:
     </p>
@@ -327,7 +336,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 20 – Em uma linha de produção, sabe-se que a probabilidade de ter uma peça com defeito é de 0,05. Se o conjunto de unidades determinadas constitui um conjunto de ensaios independentes, qual é a probabilidade de que pelo menos uma peça se encontre com defeito em um total de 10 unidades?
     </p>
@@ -340,8 +349,8 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-   <h1 class="container-titulo">FUNDAMENTOS DA COMPUTAÇÃO</h1>
-        <div class="questao-container">
+   <h1 class="container-titulo" data-subject="fundamentos">FUNDAMENTOS DA COMPUTAÇÃO</h1>
+        <div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 21 – Sobre os conceitos de complexidade de algoritmos, é correto afirmar que:
     </p>
@@ -354,7 +363,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 22 – Qual das seguintes afirmações é verdadeira sobre a análise de algoritmos recursivos?
     </p>
@@ -367,7 +376,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 23 – Considere o seguinte trecho de código:
     </p>
@@ -386,7 +395,7 @@ for (i = 1; i <= n; i++) {
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 24 – Sobre funções Hash, é correto afirmar que:
     </p>
@@ -400,7 +409,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area"></div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">QUESTÃO 25 – Sobre as árvores binárias de busca, é correto afirmar que:</p>
     
     <ul class="opcoes" data-correct-answer="E">
@@ -437,7 +446,7 @@ for (i = 1; i <= n; i++) {
     </div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 26 – A ordenação ______ determina, para cada elemento de entrada \( x \), o número de elementos menores que \( x \) e usa essa informação para inserir o elemento \( x \) diretamente em sua posição no arranjo de saída. Por exemplo, se 17 elementos forem menores que \( x \), então \( x \) pertence à posição de saída 18.
     </p>
@@ -451,7 +460,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area"></div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 27 – Quais são os valores em decimal do binário (8 bits) 10011001, considerando a representação sem sinal e em complemento de 2, respectivamente?
     </p>
@@ -468,7 +477,7 @@ for (i = 1; i <= n; i++) {
         <p><strong>Complemento de 2:</strong> O bit mais significativo é 1 (negativo). Invertemos os bits (01100110) e somamos 1 → 01100111 = 103, portanto o valor é -103</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 28 – Qual é o resultado da seguinte fórmula Infixo A+B*(C-D*(E-F)-G*H)-I*3 convertida para a notação polonesa?
     </p>
@@ -487,7 +496,7 @@ for (i = 1; i <= n; i++) {
         <p>4. Forma final: ABCDEF-*-GH*-*+13*-</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 29 – O computador tem um tempo de acesso à memória principal de 60 ns. Queremos reduzir esse tempo para 20 ns adicionando no cache. Qual a velocidade do cache (tempo de acesso) se pudermos esperar uma probabilidade de 90% de acerto?
     </p>
@@ -509,7 +518,7 @@ for (i = 1; i <= n; i++) {
         <p>O valor mais próximo nas alternativas é <strong>C) 24 ns</strong>, indicando que provavelmente houve um arredondamento diferente ou considerações adicionais no cálculo.</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 30 – Considere um sistema numérico binário com 8 bits e o uso do complemento de 2 para representação de números inteiros para a realização da operação \( 49_{10} - 120_{10} \). Com base nisso, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas.
     </p>
@@ -537,7 +546,7 @@ for (i = 1; i <= n; i++) {
         <p>4. <strong>Verdadeira</strong>: A subtração é feita somando o complemento de 2 do subtraendo (120).</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 31 – Considere um circuito sequencial composto por um flip-flop JK e dois flip-flops. Para fins de simplicidade, o sinal de clock (CLK) está omitido, porém assuma que todos os componentes estão sincronizados nele. O diagrama do circuito é apresentado na Figura 2 abaixo:
     </p>
@@ -573,7 +582,7 @@ for (i = 1; i <= n; i++) {
     </div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 32 – Considere o circuito combinacional composto por portas lógicas NOT, AND e XOR, além de um multiplexador, conforme a Figura 3, e analise as assertivas abaixo:
     </p>
@@ -604,7 +613,7 @@ for (i = 1; i <= n; i++) {
         <p><strong>III. Incorreta</strong> - O circuito descrito não implementa todas as funções de um somador completo (faltam saídas de carry out).</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 33 – Considere o seguinte código em Linguagem C (Compilador Ansi C):
     </p>
@@ -659,7 +668,7 @@ for (i = 1; i <= n; i++) {
     </div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 34 – Considerando o diagrama de classes UML representado na Figura 4, assinale a alternativa correta.
     </p>
@@ -684,7 +693,7 @@ for (i = 1; i <= n; i++) {
         <p><strong>E) Incorreta</strong> - addTarefa() é específico de Funcionario, não acessível diretamente por Pessoa.</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 35 – Relacione a Coluna 1 à Coluna 2, associando cada Paradigma de Linguagem de Programação à sua respectiva Linguagem de Programação.
     </p>
@@ -730,7 +739,7 @@ for (i = 1; i <= n; i++) {
         </ol>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 36 – Qual máquina de aceitação já seria capaz de reconhecer a linguagem a seguir?
     </p>
@@ -766,7 +775,7 @@ for (i = 1; i <= n; i++) {
         <p>Isso verifica exatamente a condição |w|<sub>a</sub> = |w|<sub>b</sub>.</p>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 37 – Qual é a Expressão Regular (ER) que denota a linguagem a seguir?
     </p>
@@ -815,7 +824,7 @@ for (i = 1; i <= n; i++) {
         </pre>
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 38 – Dada a linguagem \( L = \{w \in \{a, b\}^* | \text{o terceiro último símbolo de } w \text{ é } a\} \), analise as assertivas abaixo, assinalando \( V \), se verdadeiras, ou \( F \), se falsas.
     </p>
@@ -840,7 +849,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 39 – Nos arquivos ordenados, os registros são dispostos fisicamente no disco de acordo com os valores de um de seus campos: o campo de ordenação (chave). Analise as seguintes assertivas sobre arquivos ordenados:
     </p>
@@ -864,7 +873,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 40 – Os sistemas operacionais mantêm várias informações sobre cada arquivo, chamadas de metadados. Assinale o atributo que NÃO é um metadado de arquivo gerenciado pelo sistema operacional.
     </p>
@@ -877,7 +886,7 @@ for (i = 1; i <= n; i++) {
         <li data-option="E"> <span class="opcao-letra">E)</span> Nome dos diferentes campos lógicos representados nos registros dos arquivos (ex.: id, nome, data de nascimento, nome da mãe, RG, etc.) </li>
     </ul>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 41 – Um desenvolvedor de software armazenou registros representando tweets em um arquivo. Ele optou por utilizar uma árvore trie como índice desse arquivo para tornar eficientes alguns tipos de busca de tweets contendo palavras de determinada natureza. Sobre o uso de árvores trie, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas.
     </p>
@@ -901,7 +910,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 42 – Em um computador com suporte à memória virtual e paginação, quando ocorre um <em>page fault</em>, o sistema operacional, às vezes, precisa escolher uma página da memória principal (<em>page frame</em>) para dar lugar à página virtual que será carregada do disco como resultado do <em>page fault</em>. Dependendo do tipo de conteúdo presente na página selecionada para substituição, esse conteúdo precisa ser salvo no disco (<em>page out</em>) antes da substituição. Assinale a alternativa que indica uma região de memória típica de um processo, cujo conteúdo não exige salvamento prévio em casos de troca de páginas (<em>page replacement</em>).
     </p>
@@ -917,7 +926,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 43 – O aumento dos requisitos de paralelismo nas aplicações modernas exige mecanismos de bloqueio (locking) e sincronização cada vez mais eficientes. Nesse contexto, dois mecanismos muito usados são semáforos e spin locks. Sobre esses dois mecanismos, assinale a alternativa correta.
     </p>
@@ -934,7 +943,7 @@ for (i = 1; i <= n; i++) {
     </div>
 </div>
 
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 44 – Considere o programa abaixo, escrito em Linguagem C, executando em um computador com suporte à memória virtual e segmentação paginada, tal como em sistemas baseados em Intel x86-64.
     </p>
@@ -958,7 +967,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 45 – Qual é o tipo de dado que fornece uma maneira de definir e agrupar coleções de constantes nomeadas?
     </p>
@@ -974,7 +983,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 46 – Considere, por exemplo, que um programa precisa ordenar um vetor de objetos de dados numéricos de algum tipo e, para isso, ele usa um subprograma para o processo de ordenação. No momento em que um processo de ordenação é necessário, uma sentença como <em>sortInt(list, listLen)</em> é colocada no programa. Essa chamada é uma abstração:
     </p>
@@ -990,7 +999,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 47 – Nas linguagens de programação imperativas, o sinal + é usado para especificar a adição tanto de inteiros quanto de valores de ponto flutuante. Esse uso múltiplo de um operador é chamado de:
     </p>
@@ -1006,7 +1015,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 48 – Uma família de ligações sucessivamente adjacentes, cada uma tendo uma extremidade adjacente à anterior e outra à subsequente (à exceção da primeira e da última) é um(a):
     </p>
@@ -1022,7 +1031,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 49 – Sobre os conceitos de grafos, é correto afirmar que:
     </p>
@@ -1038,7 +1047,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="fundamentos">
     <p class="questao-titulo">
         QUESTÃO 50 – A propriedade em que vértices de um subconjunto não apresentam relações de adjacência entre si é denominada de:
     </p>
@@ -1055,8 +1064,8 @@ for (i = 1; i <= n; i++) {
     </div>
 </div>
 
-<h1 class="container-titulo">TECNOLOGIA DE COMPUTAÇÃO</h1>
-    <div class="questao-container">
+<h1 class="container-titulo" data-subject="tecnologia">TECNOLOGIA DE COMPUTAÇÃO</h1>
+    <div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 51 – Sobre bancos de dados distribuídos, partes do banco de dados residem em diferentes nós (sites) conectados em rede, cada qual dotado de um software gerenciador de dados. Há o nó coordenador, com competência para gerir a recuperação global de uma transação, e os demais nós participantes que gerem a transação em cada site e mantêm seus próprios dados locais. Em uma transação, o coordenador requisita cada participante que processará alguma parte da transação. Quando todos os participantes sinalizarem ao coordenador que a parte da transação envolvendo cada um foi processada, inicia-se o protocolo de confirmação de duas fases (two-phase commit protocol). Nesse protocolo, há o registro do desdobramento da transação nos arquivos de log, bem como a troca de mensagens entre o coordenador e os participantes. Neste último, considere os três tipos de mensagens usualmente enviadas:
     </p>
@@ -1078,7 +1087,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
     </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 52 – Quando há impasse no controle de concorrência em sistemas de bancos de dados, uma forma para o tratamento é o emprego de protocolos de prevenção, que são pessimistas quanto à efetiva ocorrência de <em>deadlock</em>. Considere as seguintes técnicas usadas em protocolos de prevenção:
     </p>
@@ -1100,7 +1109,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 53 – A normalização de esquemas de bancos de dados relacionais visa à redução da redundância de dados e à melhoria da integridade dos dados, pelo atendimento a requisitos denominados de formas normais, tais como: segunda forma normal (2NF), terceira forma normal (3NF) e forma normal de Boyce-Codd (BCNF). Um esquema de relação que atende aos requisitos de uma forma normal pode, potencialmente, atender aos requisitos de outras formas normais. Nesse sentido, se o esquema atende à:
     </p>
@@ -1123,7 +1132,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 54 – Seja o alfabeto <strong>A = { b, k, z }.</strong> Expressões regulares sobre <strong>A</strong> são definidas (da forma habitual) como cadeias (strings) contendo símbolos do alfabeto dado pela união de <strong>A</strong> com o conjunto <strong>{ (, ), *, | }.</strong> Assim:
     </p>
@@ -1155,7 +1164,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 55 – Analise as seguintes assertivas, em relação à análise sintática no contexto da construção de compiladores para linguagens de programação e assinale a alternativa correta.
     </p>
@@ -1183,7 +1192,7 @@ for (i = 1; i <= n; i++) {
     <div class="feedback-area">
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 56 – O algoritmo de ray tracing é um algoritmo bastante utilizado para gerar renderizações fotorrealísticas. Sobre o ray tracing, analise as assertivas abaixo e assinale a alternativa correta.
     </p>
@@ -1210,7 +1219,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 57 – Selecione a opção abaixo que NÃO é uma técnica/ferramenta utilizada na remoção de linhas ou superfícies ocultas.
     </p>
@@ -1227,7 +1236,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 58 – Analise as seguintes assertivas sobre reúso no contexto de engenharia de software:
     </p>
@@ -1254,7 +1263,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 59 – Uma revisão técnica formal (RTF) é uma atividade de controle de qualidade de software executada por engenheiros de software sobre um artefato de software (especificações, código, etc.). As diretrizes para a realização de uma RTF devem ser estabelecidas com antecedência, distribuídas a todos os revisores, e seguidas durante o processo de revisão. Assinale a alternativa que NÃO representa uma boa prática na condução de uma RTF.
     </p>
@@ -1271,7 +1280,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 60 – Segundo Sommerville (2011), requisitos não funcionais (RNF) podem ser classificados como de produto, organizacional ou externo. Considere os seguintes RNF de produto:
     </p>
@@ -1296,7 +1305,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 61 – A lógica fuzzy é um componente essencial da inteligência artificial, podendo ajudar na tomada de decisão de maneira flexível e adaptativa. Considerando o estudo em inteligência artificial, assinale a alternativa que apresenta corretamente a descrição da lógica fuzzy.
     </p>
@@ -1313,7 +1322,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 62 – As árvores de decisão desempenham um papel fundamental na área da inteligência artificial, sendo amplamente utilizadas em diversos domínios, fornecendo uma forma eficaz de tomar decisões automatizadas com base em padrões e características presentes nos dados. Considerando esses aspectos, assinale a alternativa INCORRETA sobre árvores de decisão.
     </p>
@@ -1330,7 +1339,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 63 – Em relação aos métodos de interpolação de intensidade de níveis de cinza ou cor de uma imagem, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas.
     </p>
@@ -1357,7 +1366,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 64 – As redes neurais são utilizadas na área de reconhecimento de padrões. O modelo mais simples de rede neural possui apenas uma unidade, denominada ______. O modelo é utilizado apenas em problemas de classificação linearmente separáveis. Essa rede mapeia múltiplas entradas para uma saída representada por um valor binário.
     </p>
@@ -1376,7 +1385,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 65 – Uma rede conectada à Internet possui a máscara de sub-rede 255.255.255.128. Qual o número máximo de computadores que a rede suporta?
     </p>
@@ -1393,7 +1402,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 66 – Qual dispositivo atua somente nas camadas física e enlace e só envia mensagens às portas para as quais essas mensagens são destinadas?
     </p>
@@ -1410,7 +1419,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 67 – Considere um pacote de p bytes, enviados por um canal de d metros à taxa de b bits por segundo. Suponha que a velocidade de propagação no meio seja igual a da velocidade da luz no vácuo (c). Qual é a expressão para se determinar a largura/comprimento de um bit?
     </p>
@@ -1427,7 +1436,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 68 – Uma transação cliente se torna distribuída se ativa operações em vários servidores diferentes, isto é, um cliente faz requisições para mais de um servidor. A transação cliente ______ conclui cada uma de suas requisições antes de passar para a próxima. Portanto, cada transação acessa objetos dos servidores em sequência. Quando os servidores usam <em>locks</em>, uma transação só pode estar esperando um objeto por vez.
     </p>
@@ -1446,7 +1455,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 69 – Em sistemas operacionais distribuídos, é correto afirmar que:
     </p>
@@ -1463,7 +1472,7 @@ for (i = 1; i <= n; i++) {
         <!-- Área para feedback/comentários sobre a questão -->
     </div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 70 – Sobre comunicação indireta em sistemas distribuídos, é correto afirmar que:
     </p>
@@ -1489,6 +1498,47 @@ for (i = 1; i <= n; i++) {
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    // Filtro por assunto
+    const assuntoButtons = document.querySelectorAll('.btn-assunto');
+    const questoes = document.querySelectorAll('.questao-container');
+    const titulos = document.querySelectorAll('.container-titulo');
+
+    assuntoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedSubject = button.dataset.subject;
+            
+            // Remove active de todos os botões
+            assuntoButtons.forEach(btn => btn.classList.remove('active'));
+            // Adiciona active no botão clicado
+            button.classList.add('active');
+
+            // Filtra questões e títulos
+            if (selectedSubject === 'all') {
+                questoes.forEach(q => q.style.display = 'block');
+                titulos.forEach(t => t.style.display = 'block');
+            } else {
+                questoes.forEach(q => {
+                    if (q.dataset.subject === selectedSubject) {
+                        q.style.display = 'block';
+                    } else {
+                        q.style.display = 'none';
+                    }
+                });
+                
+                titulos.forEach(t => {
+                    if (t.dataset.subject === selectedSubject) {
+                        t.style.display = 'block';
+                    } else {
+                        t.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Scroll para o topo após filtrar
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
     // Encontra TODAS as questões na página
     const todasAsQuestoes = document.querySelectorAll('.questao-container');
 
